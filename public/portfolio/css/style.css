@@ -187,7 +187,7 @@ a[data-link].is-disabled {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 45%, rgba(7,8,12,0.75));
 }
-.about-visual img { transition: transform 0.6s var(--ease); }
+.about-visual img { width: 100%; max-height: 520px; object-fit: cover; transition: transform 0.6s var(--ease); }
 .about-visual:hover img { transform: scale(1.05); }
 .about-content p { color: var(--text-muted); }
 .info-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.8rem; }
