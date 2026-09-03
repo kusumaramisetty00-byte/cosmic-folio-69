@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Analyst Portfolio | Python, SQL & Power BI</title>
+<meta name="description" content="Portfolio of a data analyst working with Python, SQL, Excel and Power BI — projects, skills, certifications and contact details." />
+<meta property="og:title" content="Data Analyst Portfolio | Python, SQL & Power BI" />
+<meta property="og:description" content="Turning data into meaningful insights and building solutions that create impact." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<!-- ===== Decorative background layers ===== -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+<canvas id="particles" class="bg-particles" aria-hidden="true"></canvas>
+
+<a class="skip-link" href="#home">Skip to content</a>
+
+<!-- ===== Navigation ===== -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="#home"><span class="logo-mark">&lt;/&gt;</span> <span data-config="name">Your Name</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--primary nav-resume" data-link="resume" download>Download Resume</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- ===== Hero ===== -->
+<section id="home" class="hero">
+  <div class="container hero-inner">
+    <p class="hero-eyebrow reveal">Available for opportunities</p>
+    <h1 class="hero-title reveal" data-config="name">Your Name</h1>
+    <p class="hero-role reveal">Data Analyst <span>|</span> Python <span>|</span> SQL <span>|</span> Power BI <span>|</span> Excel</p>
+    <p class="hero-tagline reveal">Turning data into meaningful insights and building solutions that create impact.</p>
+
+    <div class="hero-actions reveal">
+      <a class="btn btn--primary" href="#projects">View My Projects</a>
+      <a class="btn btn--ghost" data-link="resume" download>Download Resume</a>
+    </div>
+
+    <ul class="social-row reveal" aria-label="Social links">
+      <li><a data-link="github" class="social">GitHub</a></li>
+      <li><a data-link="linkedin" class="social">LinkedIn</a></li>
+      <li><a data-link="email" class="social">Email</a></li>
+    </ul>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">01 — About</p>
+      <h2 class="section-title">About Me</h2>
+    </header>
+
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <img src="assets/profile.jpg" alt="Portrait placeholder of the portfolio owner" width="768" height="960" loading="lazy" />
+      </div>
+
+      <div class="about-content reveal">
+        <p>[Short professional introduction placeholder — replace with 2–3 sentences about who you are, what you do and what kind of problems you enjoy solving.]</p>
+        <p>[Education summary placeholder.] [Career goal placeholder.] [Technical interests placeholder.]</p>
+
+        <div class="info-cards">
+          <article class="card info-card"><h3>Education</h3><p>[Degree — University — Year]</p></article>
+          <article class="card info-card"><h3>Technical Focus</h3><p>[Your core technical focus]</p></article>
+          <article class="card info-card"><h3>Data &amp; Analytics</h3><p>[Analytics tools you work with]</p></article>
+          <article class="card info-card"><h3>Career Goal</h3><p>[Your career goal]</p></article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section id="skills" class="section section--alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">02 — Skills</p>
+      <h2 class="section-title">Skills &amp; Toolkit</h2>
+    </header>
+    <div id="skillsGroups" class="skills-groups"></div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section id="projects" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">03 — Projects</p>
+      <h2 class="section-title">Selected Projects</h2>
+    </header>
+
+    <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Experience ===== -->
+<section id="experience" class="section section--alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">04 — Experience</p>
+      <h2 class="section-title">Experience</h2>
+    </header>
+    <div class="timeline" id="experienceTimeline"></div>
+  </div>
+</section>
+
+<!-- ===== Education ===== -->
+<section id="education" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">05 — Education</p>
+      <h2 class="section-title">Education</h2>
+    </header>
+    <div class="timeline" id="educationTimeline"></div>
+  </div>
+</section>
+
+<!-- ===== Certifications ===== -->
+<section id="certifications" class="section section--alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">06 — Certifications</p>
+      <h2 class="section-title">Certifications</h2>
+    </header>
+    <div class="cards-grid" id="certificationsGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Achievements ===== -->
+<section id="achievements" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">07 — Achievements</p>
+      <h2 class="section-title">Achievements</h2>
+    </header>
+    <div class="cards-grid" id="achievementsGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Blog ===== -->
+<section id="blog" class="section section--alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">08 — Blog</p>
+      <h2 class="section-title">Articles</h2>
+    </header>
+    <div class="cards-grid" id="blogGrid"></div>
+  </div>
+</section>
+
+<!-- ===== Resume ===== -->
+<section id="resume" class="section">
+  <div class="container">
+    <div class="resume-panel reveal">
+      <h2 class="section-title">Let's Build Something Meaningful</h2>
+      <p>If my work looks like a fit for your team or project, my full resume covers the details — background, tools and the work behind each project.</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" data-link="resume" download>Download Resume</a>
+        <a class="btn btn--ghost" data-link="resume" target="_blank" rel="noopener">View Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="section section--alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="section-kicker">09 — Contact</p>
+      <h2 class="section-title">Get In Touch</h2>
+    </header>
+
+    <div class="contact-grid">
+      <form class="card contact-form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="cName">Name</label>
+          <input id="cName" name="name" type="text" autocomplete="name" required />
+          <p class="error" data-error-for="cName"></p>
+        </div>
+        <div class="field">
+          <label for="cEmail">Email</label>
+          <input id="cEmail" name="email" type="email" autocomplete="email" required />
+          <p class="error" data-error-for="cEmail"></p>
+        </div>
+        <div class="field">
+          <label for="cSubject">Subject</label>
+          <input id="cSubject" name="subject" type="text" required />
+          <p class="error" data-error-for="cSubject"></p>
+        </div>
+        <div class="field">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" name="message" rows="5" required></textarea>
+          <p class="error" data-error-for="cMessage"></p>
+        </div>
+        <button class="btn btn--primary" type="submit" id="submitBtn">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-side reveal">
+        <article class="card info-card"><h3>Email</h3><p><a data-link="email">[Add your email]</a></p></article>
+        <article class="card info-card"><h3>LinkedIn</h3><p><a data-link="linkedin">[Add your LinkedIn]</a></p></article>
+        <article class="card info-card"><h3>GitHub</h3><p><a data-link="github">[Add your GitHub]</a></p></article>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-line" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-name" data-config="name">Your Name</p>
+      <p class="footer-tag">Turning data into meaningful insights.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a data-link="github">GitHub</a><a data-link="linkedin">LinkedIn</a><a data-link="email">Email</a>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> <span data-config="name">Your Name</span>. All rights reserved.</p>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Scroll to top">↑</button>
+
+<!-- ===== Project details modal ===== -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" data-close-modal aria-label="Close details">×</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
