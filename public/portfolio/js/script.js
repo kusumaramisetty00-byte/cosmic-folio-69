@@ -12,7 +12,7 @@
 
 /* =========== CONFIG: basic details =========== */
 const portfolioConfig = {
-  name: "Your Name", // <- replace with your full name
+  name: "Ramisetty Kusuma", // <- replace with your full name
 };
 
 /* =========== CONFIG: links (leave "" if not available yet) =========== */
@@ -38,7 +38,7 @@ const skills = [
       { icon: "🗄️", name: "SQL", description: "Querying, joins, aggregations and analytical reporting." },
       { icon: "📊", name: "Excel", description: "Pivot tables, formulas and structured reporting workbooks." },
       { icon: "📈", name: "Power BI", description: "Interactive dashboards and data storytelling." },
-      { icon: "📉", name: "Tableau", description: "Visual exploration and shareable analytics views." },
+      { icon: "📉", name: "HTML", description: "Visual exploration and shareable analytics views." },
     ],
   },
   {
@@ -270,7 +270,7 @@ function renderExperience() {
   if (!experience.length) {
     el.classList.remove("timeline");
     el.innerHTML = `<div class="card reveal">${emptyNote(
-      "Professional experience will be listed here as it is added."
+       "Entry level "
     )}</div>`;
     return;
   }
@@ -305,7 +305,7 @@ function renderEducation() {
 function renderCertifications() {
   const el = $("#certificationsGrid");
   if (!certifications.length) {
-    el.innerHTML = `<article class="card reveal">${emptyNote("Certifications will appear here once added.")}</article>`;
+    el.innerHTML = `<article class="card reveal">${emptyNote(" ")}</article>`;
     return;
   }
   el.innerHTML = certifications
