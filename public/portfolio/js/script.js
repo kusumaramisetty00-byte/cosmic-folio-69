@@ -17,9 +17,9 @@ const portfolioConfig = {
 
 /* =========== CONFIG: links (leave "" if not available yet) =========== */
 const portfolioLinks = {
-  github: "",              // e.g. "https://github.com/username"
-  linkedin: "",            // e.g. "https://linkedin.com/in/username"
-  email: "",               // e.g. "you@example.com" (mailto: is added automatically)
+  github: "https://github.com/kusumaramisetty00-byte",
+  linkedin: "https://linkedin.com/in/ramisetty-kusuma-495777330",
+  email: "kusumaramisetty00@gmail.com",
   resume: "assets/resume.pdf", // place your PDF at portfolio/assets/resume.pdf
 };
 
