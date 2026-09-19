@@ -324,7 +324,17 @@ function renderCertifications() {
 function renderAchievements() {
   const el = $("#achievementsGrid");
   if (!achievements.length) {
-    el.innerHTML = `<article class="card reveal">${emptyNote("Achievements will appear here once added.")}</article>`;
+    el.innerHTML = `<article class="card reveal"><p>01 — Academic Achievement
+Successfully completed Bachelor’s Degree
+
+02 — Data Analytics Project
+Created a Sales Forecasting Dashboard using Power BI
+
+03 — Programming Skills
+Developed practical projects using Python and JavaScript
+
+04 — Web Development
+Built responsive websites using HTML, CSS and JavaScript</p></article>`;
     return;
   }
   el.innerHTML = achievements
@@ -342,9 +352,29 @@ function renderAchievements() {
 function renderBlog() {
   const el = $("#blogGrid");
   if (!blogPosts.length) {
-    el.innerHTML = `<article class="card reveal"><p class="meta">Coming soon</p><h3>Articles in progress</h3>${emptyNote(
-      "Written articles will be published here."
-    )}</article>`;
+    el.innerHTML = `<article class="card reveal"><p class="meta">
+</p><h3>
+</h3><p class="empty-note">
+</p><p>1. Python for Beginners
+Learn Python basics including variables, conditions, loops, functions, and data structures.
+
+2. Introduction to Django
+Understand Django MVT architecture, virtual environments, URLs, views, models, and templates.
+
+3. JavaScript Array Methods
+Learn useful methods like map(), filter(), find(), forEach(), and reduce() with practical examples.
+
+4. SQL Basics for Beginners
+Learn SELECT, WHERE, GROUP BY, ORDER BY, JOIN, and other commonly used SQL queries.
+
+5. Getting Started with Power BI
+Learn how to clean data, create visualizations, build dashboards, and understand KPIs.
+
+
+
+
+
+</p></article>`;
     return;
   }
   el.innerHTML = blogPosts
