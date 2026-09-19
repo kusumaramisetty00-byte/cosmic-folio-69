@@ -20,7 +20,7 @@ const portfolioLinks = {
   github: "https://github.com/kusumaramisetty00-byte",
   linkedin: "https://linkedin.com/in/ramisetty-kusuma-495777330",
   email: "kusumaramisetty00@gmail.com",
-  resume: "assets/resume.pdf", // place your PDF at portfolio/assets/resume.pdf
+  resume: "/__l5e/assets-v1/6c9d06b5-dafa-415a-8b8f-22abbbb38116/Kusuma_Resume.pdf",
 };
 
 /* =========== CONFIG: skills =========== */
