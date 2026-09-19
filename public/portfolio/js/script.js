@@ -249,7 +249,6 @@ function renderProjects() {
           ${tagList(p.technologies)}
           <ul class="project-features">${p.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
           <div class="project-actions">
-            ${linkButton(p.github, "GitHub")}
             ${linkButton(p.demo, "Live Demo")}
             <button class="btn btn--primary btn--sm" data-project="${escapeHtml(p.id)}">View Details</button>
           </div>
@@ -305,7 +304,7 @@ function renderEducation() {
 function renderCertifications() {
   const el = $("#certificationsGrid");
   if (!certifications.length) {
-    el.innerHTML = `<article class="card reveal">${emptyNote(" ")}</article>`;
+    el.innerHTML = `<article class="card reveal">${emptyNote(" Certified in Data Analytics Training")}</article>`;
     return;
   }
   el.innerHTML = certifications
