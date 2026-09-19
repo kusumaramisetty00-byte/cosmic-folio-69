@@ -134,10 +134,10 @@ const experience = [
 
 const education = [
   {
-    degree: "[Degree name]",
-    institution: "[University / College]",
-    duration: "[Start year] – [Graduation year]",
-    details: ["[Relevant coursework]", "[Academic achievement, if any]"],
+    degree: "[MCA]",
+    institution: "[ Vikram simhapuri University ]",
+    duration: "[2024] – [2026]",
+    details: ["[Computer science]", "\n"],
   },
 ];
 
