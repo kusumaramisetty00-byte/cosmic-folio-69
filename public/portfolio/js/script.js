@@ -355,10 +355,9 @@ function renderBlog() {
     .map(
       (b) => `
       <article class="card reveal">
-        <p class="meta">${escapeHtml(b.category)} · ${escapeHtml(b.date)}</p>
         <h3>${escapeHtml(b.title)}</h3>
         <p>${escapeHtml(b.excerpt)}</p>
-        <div class="project-actions">${linkButton(b.url, "Read More")}</div>
+        ${b.url ? `<div class="project-actions">${linkButton(b.url, "Read More")}</div>` : ""}
       </article>`
     )
     .join("");
