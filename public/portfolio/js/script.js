@@ -146,11 +146,18 @@ const certifications = [
 ];
 
 const achievements = [
-  // { title: "", description: "", date: "" }
+  { title: "Academic Achievement", description: "Successfully completed Bachelor's Degree" },
+  { title: "Data Analytics Project", description: "Created a Sales Forecasting Dashboard using Power BI" },
+  { title: "Programming Skills", description: "Developed practical projects using Python and JavaScript" },
+  { title: "Web Development", description: "Built responsive websites using HTML, CSS and JavaScript" },
 ];
 
 const blogPosts = [
-  // { title: "", category: "", date: "", excerpt: "", url: "" }
+  { title: "Python for Beginners", excerpt: "Learn Python basics including variables, conditions, loops, functions, and data structures." },
+  { title: "Introduction to Django", excerpt: "Understand Django MVT architecture, virtual environments, URLs, views, models, and templates." },
+  { title: "JavaScript Array Methods", excerpt: "Learn useful methods like map(), filter(), find(), forEach(), and reduce() with practical examples." },
+  { title: "SQL Basics for Beginners", excerpt: "Learn SELECT, WHERE, GROUP BY, ORDER BY, JOIN, and other commonly used SQL queries." },
+  { title: "Getting Started with Power BI", excerpt: "Learn how to clean data, create visualizations, build dashboards, and understand KPIs." },
 ];
 
 /* =========================================================
