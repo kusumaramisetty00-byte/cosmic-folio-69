@@ -331,24 +331,13 @@ function renderCertifications() {
 function renderAchievements() {
   const el = $("#achievementsGrid");
   if (!achievements.length) {
-    el.innerHTML = `<article class="card reveal"><p>01 — Academic Achievement
-Successfully completed Bachelor’s Degree
-
-02 — Data Analytics Project
-Created a Sales Forecasting Dashboard using Power BI
-
-03 — Programming Skills
-Developed practical projects using Python and JavaScript
-
-04 — Web Development
-Built responsive websites using HTML, CSS and JavaScript</p></article>`;
+    el.innerHTML = `<article class="card reveal">${emptyNote("Achievements will appear here once added.")}</article>`;
     return;
   }
   el.innerHTML = achievements
     .map(
       (a) => `
       <article class="card reveal">
-        ${a.date ? `<p class="meta">${escapeHtml(a.date)}</p>` : ""}
         <h3>${escapeHtml(a.title)}</h3>
         <p>${escapeHtml(a.description)}</p>
       </article>`
