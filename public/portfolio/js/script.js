@@ -348,29 +348,7 @@ function renderAchievements() {
 function renderBlog() {
   const el = $("#blogGrid");
   if (!blogPosts.length) {
-    el.innerHTML = `<article class="card reveal"><p class="meta">
-</p><h3>
-</h3><p class="empty-note">
-</p><p>1. Python for Beginners
-Learn Python basics including variables, conditions, loops, functions, and data structures.
-
-2. Introduction to Django
-Understand Django MVT architecture, virtual environments, URLs, views, models, and templates.
-
-3. JavaScript Array Methods
-Learn useful methods like map(), filter(), find(), forEach(), and reduce() with practical examples.
-
-4. SQL Basics for Beginners
-Learn SELECT, WHERE, GROUP BY, ORDER BY, JOIN, and other commonly used SQL queries.
-
-5. Getting Started with Power BI
-Learn how to clean data, create visualizations, build dashboards, and understand KPIs.
-
-
-
-
-
-</p></article>`;
+    el.innerHTML = `<article class="card reveal">${emptyNote("Articles will be published here.")}</article>`;
     return;
   }
   el.innerHTML = blogPosts
