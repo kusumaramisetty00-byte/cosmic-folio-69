@@ -357,3 +357,30 @@ body.no-scroll { overflow: hidden; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ===== Edit mode ===== */
+.edit-toggle { margin-left: 0.6rem; padding: 0.4rem 0.9rem; font-size: 0.85rem; }
+body.edit-mode main h1, body.edit-mode main h2, body.edit-mode main h3,
+body.edit-mode main p, body.edit-mode main li, body.edit-mode footer p {
+  outline: 1px dashed rgba(120, 180, 255, 0.55);
+  outline-offset: 2px;
+  border-radius: 4px;
+  cursor: text;
+  transition: background 0.15s ease;
+}
+body.edit-mode main h1:hover, body.edit-mode main h2:hover, body.edit-mode main h3:hover,
+body.edit-mode main p:hover, body.edit-mode main li:hover, body.edit-mode footer p:hover,
+body.edit-mode [contenteditable="true"]:focus {
+  background: rgba(120, 180, 255, 0.12);
+  outline: 1px solid rgba(120, 180, 255, 0.9);
+}
+.edit-bar {
+  position: fixed; left: 50%; bottom: 1.2rem; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 1rem; z-index: 999;
+  background: rgba(15, 23, 42, 0.92); border: 1px solid rgba(120, 180, 255, 0.4);
+  border-radius: 12px; padding: 0.7rem 1.1rem; backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+.edit-bar p { margin: 0; font-size: 0.85rem; opacity: 0.85; }
+.edit-bar-actions { display: flex; gap: 0.5rem; }
+.edit-bar .btn { width: auto; padding: 0.4rem 0.9rem; font-size: 0.85rem; }
