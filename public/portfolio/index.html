@@ -43,6 +43,8 @@
       <a class="btn btn--primary nav-resume" data-link="resume" download>Download Resume</a>
     </nav>
 
+    <button class="btn btn--ghost edit-toggle" id="editToggle" aria-pressed="false">✏️ Edit</button>
+
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
@@ -265,6 +267,15 @@
   <div class="modal-panel" role="document">
     <button class="modal-close" data-close-modal aria-label="Close details">×</button>
     <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ===== Edit mode toolbar ===== -->
+<div class="edit-bar" id="editBar" hidden>
+  <p>✏️ Edit mode — click any highlighted text to change it.</p>
+  <div class="edit-bar-actions">
+    <button class="btn btn--ghost" id="editReset">Reset all</button>
+    <button class="btn btn--primary" id="editDone">Done</button>
   </div>
 </div>
 

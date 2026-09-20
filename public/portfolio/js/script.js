@@ -619,6 +619,80 @@ function initParticles() {
 }
 
 /* =========================================================
+   EDIT MODE — click text on the page to change it.
+   Changes are saved in this browser (localStorage) and
+   re-applied on every visit. "Reset all" restores originals.
+   ========================================================= */
+const EDIT_KEY = "portfolio-edits";
+
+function editTargetKey(el) {
+  const section = el.closest("section, footer, header");
+  const scope = section ? (section.id || section.className) : "page";
+  const tag = el.tagName.toLowerCase();
+  const siblings = Array.from((section || document).querySelectorAll(tag));
+  return scope + "|" + tag + "|" + siblings.indexOf(el);
+}
+
+function editableElements() {
+  return Array.from(
+    document.querySelectorAll(
+      "main h1, main h2, main h3, main p, main li, main .skill-chip, footer p"
+    )
+  ).filter((el) => el.children.length === 0 || el.childElementCount === 0 || el.innerText.trim() !== "");
+}
+
+function applySavedEdits() {
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(EDIT_KEY) || "{}"); } catch (e) { saved = {}; }
+  editableElements().forEach((el) => {
+    const key = editTargetKey(el);
+    if (saved[key] !== undefined) el.innerText = saved[key];
+  });
+}
+
+function initEditMode() {
+  const toggle = document.getElementById("editToggle");
+  const bar = document.getElementById("editBar");
+  const done = document.getElementById("editDone");
+  const reset = document.getElementById("editReset");
+  if (!toggle || !bar) return;
+
+  let active = false;
+
+  function setActive(on) {
+    active = on;
+    document.body.classList.toggle("edit-mode", on);
+    bar.hidden = !on;
+    toggle.setAttribute("aria-pressed", String(on));
+    toggle.textContent = on ? "✏️ Editing…" : "✏️ Edit";
+    editableElements().forEach((el) => {
+      el.contentEditable = on ? "true" : "false";
+      if (on) el.setAttribute("spellcheck", "false");
+      else el.removeAttribute("spellcheck");
+    });
+    if (on) {
+      const first = editableElements()[0];
+      if (first) first.focus();
+    }
+  }
+
+  function saveEdits() {
+    const saved = {};
+    editableElements().forEach((el) => {
+      saved[editTargetKey(el)] = el.innerText;
+    });
+    localStorage.setItem(EDIT_KEY, JSON.stringify(saved));
+  }
+
+  toggle.addEventListener("click", () => setActive(!active));
+  done.addEventListener("click", () => { saveEdits(); setActive(false); });
+  reset.addEventListener("click", () => {
+    localStorage.removeItem(EDIT_KEY);
+    location.reload();
+  });
+}
+
+/* =========================================================
    INIT
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
@@ -630,6 +704,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAchievements();
   renderBlog();
   applyConfig();
+  applySavedEdits();
+  initEditMode();
   initNavigation();
   initFilters();
   initModal();
