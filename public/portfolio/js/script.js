@@ -146,11 +146,18 @@ const certifications = [
 ];
 
 const achievements = [
-  // { title: "", description: "", date: "" }
+  { title: "Academic Achievement", description: "Successfully completed Bachelor's Degree" },
+  { title: "Data Analytics Project", description: "Created a Sales Forecasting Dashboard using Power BI" },
+  { title: "Programming Skills", description: "Developed practical projects using Python and JavaScript" },
+  { title: "Web Development", description: "Built responsive websites using HTML, CSS and JavaScript" },
 ];
 
 const blogPosts = [
-  // { title: "", category: "", date: "", excerpt: "", url: "" }
+  { title: "Python for Beginners", excerpt: "Learn Python basics including variables, conditions, loops, functions, and data structures." },
+  { title: "Introduction to Django", excerpt: "Understand Django MVT architecture, virtual environments, URLs, views, models, and templates." },
+  { title: "JavaScript Array Methods", excerpt: "Learn useful methods like map(), filter(), find(), forEach(), and reduce() with practical examples." },
+  { title: "SQL Basics for Beginners", excerpt: "Learn SELECT, WHERE, GROUP BY, ORDER BY, JOIN, and other commonly used SQL queries." },
+  { title: "Getting Started with Power BI", excerpt: "Learn how to clean data, create visualizations, build dashboards, and understand KPIs." },
 ];
 
 /* =========================================================
@@ -324,24 +331,13 @@ function renderCertifications() {
 function renderAchievements() {
   const el = $("#achievementsGrid");
   if (!achievements.length) {
-    el.innerHTML = `<article class="card reveal"><p>01 — Academic Achievement
-Successfully completed Bachelor’s Degree
-
-02 — Data Analytics Project
-Created a Sales Forecasting Dashboard using Power BI
-
-03 — Programming Skills
-Developed practical projects using Python and JavaScript
-
-04 — Web Development
-Built responsive websites using HTML, CSS and JavaScript</p></article>`;
+    el.innerHTML = `<article class="card reveal">${emptyNote("Achievements will appear here once added.")}</article>`;
     return;
   }
   el.innerHTML = achievements
     .map(
       (a) => `
       <article class="card reveal">
-        ${a.date ? `<p class="meta">${escapeHtml(a.date)}</p>` : ""}
         <h3>${escapeHtml(a.title)}</h3>
         <p>${escapeHtml(a.description)}</p>
       </article>`
@@ -352,39 +348,16 @@ Built responsive websites using HTML, CSS and JavaScript</p></article>`;
 function renderBlog() {
   const el = $("#blogGrid");
   if (!blogPosts.length) {
-    el.innerHTML = `<article class="card reveal"><p class="meta">
-</p><h3>
-</h3><p class="empty-note">
-</p><p>1. Python for Beginners
-Learn Python basics including variables, conditions, loops, functions, and data structures.
-
-2. Introduction to Django
-Understand Django MVT architecture, virtual environments, URLs, views, models, and templates.
-
-3. JavaScript Array Methods
-Learn useful methods like map(), filter(), find(), forEach(), and reduce() with practical examples.
-
-4. SQL Basics for Beginners
-Learn SELECT, WHERE, GROUP BY, ORDER BY, JOIN, and other commonly used SQL queries.
-
-5. Getting Started with Power BI
-Learn how to clean data, create visualizations, build dashboards, and understand KPIs.
-
-
-
-
-
-</p></article>`;
+    el.innerHTML = `<article class="card reveal">${emptyNote("Articles will be published here.")}</article>`;
     return;
   }
   el.innerHTML = blogPosts
     .map(
       (b) => `
       <article class="card reveal">
-        <p class="meta">${escapeHtml(b.category)} · ${escapeHtml(b.date)}</p>
         <h3>${escapeHtml(b.title)}</h3>
         <p>${escapeHtml(b.excerpt)}</p>
-        <div class="project-actions">${linkButton(b.url, "Read More")}</div>
+        ${b.url ? `<div class="project-actions">${linkButton(b.url, "Read More")}</div>` : ""}
       </article>`
     )
     .join("");
