@@ -115,6 +115,37 @@ const projects = [
       results: "Delivered a responsive single-page portfolio with clear sections for recruiters and working profile actions.",
       insights: ["Clear content hierarchy improves scanning", "Responsive design keeps key actions usable on smaller screens"],
     },
+    github: "https://github.com/kusumaramisetty00-byte/cosmic-folio-69",
+  },
+  {
+    id: "personal-portfolio",
+    title: "Personal Portfolio",
+    image: "assets/project-3.jpg",
+    categories: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A responsive personal portfolio that presents my profile, data analytics skills, academic background, achievements, and contact details in a clear vCard-style layout.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Responsive vCard-style layout",
+      "Skills and education presentation",
+      "Projects and achievements showcase",
+      "Direct professional contact links",
+    ],
+    github: "https://github.com/kusumaramisetty00-byte/personal-portfolio",
+    demo: "",
+    details: {
+      overview: "A public portfolio project built to organize my professional background and technical capabilities in one mobile-friendly website.",
+      problem: "Recruiters need a quick way to review my skills, education, achievements, and contact information.",
+      objective: "Present my professional profile in a concise, accessible, and responsive format.",
+      dataset: "This website uses professional profile content rather than a data-analysis dataset.",
+      methodology: [
+        "Organized profile information into focused sections",
+        "Built the visual layout with HTML and CSS",
+        "Added interactive behavior with JavaScript",
+      ],
+      results: "Published a responsive portfolio repository that can be reviewed and shared through GitHub.",
+      insights: ["Compact layouts help recruiters scan information quickly", "Mobile-friendly presentation improves accessibility"],
+    },
   },
 ];
 
@@ -265,7 +296,8 @@ function renderProjects() {
           ${tagList(p.technologies)}
           <ul class="project-features">${p.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
           <div class="project-actions">
-            ${linkButton(p.demo, "Live Demo")}
+            ${p.github ? linkButton(p.github, "GitHub") : ""}
+            ${p.demo ? linkButton(p.demo, "Live Demo") : ""}
             <button class="btn btn--primary btn--sm" data-project="${escapeHtml(p.id)}">View Details</button>
           </div>
         </div>
@@ -485,7 +517,7 @@ function initModal() {
       <h4>Key Features</h4><ul>${project.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
       <h4>Results</h4><p>${escapeHtml(d.results)}</p>
       <h4>Key Insights</h4><ul>${(d.insights || []).map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
-      <div class="project-actions">${linkButton(project.github, "GitHub")}${linkButton(project.demo, "Live Demo")}</div>
+      ${(project.github || project.demo) ? `<div class="project-actions">${project.github ? linkButton(project.github, "GitHub") : ""}${project.demo ? linkButton(project.demo, "Live Demo") : ""}</div>` : ""}
     `;
     lastFocused = document.activeElement;
     modal.hidden = false;
