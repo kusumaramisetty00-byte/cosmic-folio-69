@@ -20,7 +20,7 @@ const portfolioLinks = {
   github: "https://github.com/kusumaramisetty00-byte",
   linkedin: "https://linkedin.com/in/ramisetty-kusuma-495777330",
   email: "kusumaramisetty00@gmail.com",
-  resume: "/__l5e/assets-v1/6c9d06b5-dafa-415a-8b8f-22abbbb38116/Kusuma_Resume.pdf",
+  resume: "assets/Kusuma_Ramisetty_Resume.pdf",
 };
 
 /* =========== CONFIG: skills =========== */
@@ -58,70 +58,93 @@ const skills = [
 const projects = [
   {
     id: "sales-forecasting",
-    title: "Sales Forecasting for Retail",
+    title: "Sales Forecasting for Retail Using Time Series Analysis",
     image: "assets/project-1.jpg",
-    categories: ["Data Analytics", "Python", "SQL", "Power BI"],
+    categories: ["Data Analytics", "Excel", "Power BI"],
     description:
-      "A data analytics and forecasting project focused on analyzing historical retail sales data, identifying trends, generating forecasts, and presenting insights through interactive dashboards.",
-    technologies: ["Python", "SQL", "Excel", "Power BI"],
+      "Cleaned retail sales data, analyzed seasonal patterns, built forecasts, and created an interactive Power BI dashboard for sales, growth, and product performance.",
+    technologies: ["Microsoft Excel", "Power BI", "Time Series Analysis"],
     features: [
-      "Historical sales trend analysis",
-      "Seasonality and demand pattern detection",
-      "Forecast model for upcoming periods",
-      "Interactive Power BI dashboard",
+      "Missing-value and duplicate-record cleanup",
+      "Seasonal trend and sales pattern analysis",
+      "Future sales forecasting",
+      "Monthly sales, growth, and product performance dashboard",
     ],
     github: "",
     demo: "",
     details: {
-      overview: "[Overview placeholder — describe the project in 2–3 sentences.]",
-      problem: "[Problem statement placeholder.]",
-      objective: "[Objective placeholder.]",
-      dataset: "[Dataset description placeholder.]",
-      methodology: ["[Step 1]", "[Step 2]", "[Step 3]"],
-      results: "[Results placeholder.]",
-      insights: ["[Key insight 1]", "[Key insight 2]"],
+      overview: "A retail analytics project using historical sales data to understand performance over time and forecast future sales trends.",
+      problem: "Raw retail records required cleaning and analysis before trends, peak periods, and underperforming products could be identified.",
+      objective: "Create a reliable analysis and interactive dashboard that supports clearer sales decisions.",
+      dataset: "Historical retail sales records containing dates, sales values, and product performance information.",
+      methodology: [
+        "Cleaned missing values and removed duplicate records in Microsoft Excel",
+        "Performed time-series analysis to identify seasonal trends and sales patterns",
+        "Built forecasts and presented results in an interactive Power BI dashboard",
+      ],
+      results: "Produced a dashboard that tracks monthly sales, growth rate, product performance, and forecast trends.",
+      insights: ["Identified peak sales periods", "Highlighted underperforming products for further review"],
     },
   },
   {
-    id: "sql-analytics",
-    title: "SQL Analytics Case Study",
+    id: "portfolio-website",
+    title: "Personal Portfolio Website",
     image: "assets/project-2.jpg",
-    categories: ["Data Analytics", "SQL"],
+    categories: ["HTML", "CSS", "JavaScript"],
     description:
-      "A structured SQL case study exploring a relational dataset to answer business questions with queries, views and summary reporting.",
-    technologies: ["SQL", "MySQL", "Excel"],
-    features: ["Relational schema exploration", "Analytical queries and views", "Business question breakdown", "Summary reporting"],
+      "Designed and developed this responsive portfolio to present my profile, technical skills, projects, education, resume, and contact information.",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    features: [
+      "Semantic, accessible page structure",
+      "Responsive desktop and mobile layouts",
+      "Filterable projects and detailed project views",
+      "Working resume and contact links",
+    ],
     github: "",
     demo: "",
     details: {
-      overview: "[Overview placeholder.]",
-      problem: "[Problem statement placeholder.]",
-      objective: "[Objective placeholder.]",
-      dataset: "[Dataset description placeholder.]",
-      methodology: ["[Step 1]", "[Step 2]"],
-      results: "[Results placeholder.]",
-      insights: ["[Key insight 1]"],
+      overview: "A personal portfolio website created to give recruiters a clear overview of my background, skills, education, and practical work.",
+      problem: "My professional information and project work needed one organized, easy-to-share online destination.",
+      objective: "Build a clean portfolio that is easy to navigate and works well across desktop and mobile screens.",
+      dataset: "This project does not use a dataset; its content is based on my resume and professional profile.",
+      methodology: [
+        "Structured the content with semantic HTML",
+        "Created the visual design and responsive layouts with CSS",
+        "Added project filters, details, validation, and navigation behavior with JavaScript",
+      ],
+      results: "Delivered a responsive single-page portfolio with clear sections for recruiters and working profile actions.",
+      insights: ["Clear content hierarchy improves scanning", "Responsive design keeps key actions usable on smaller screens"],
     },
+    github: "https://github.com/kusumaramisetty00-byte/cosmic-folio-69",
   },
   {
-    id: "python-automation",
-    title: "Python Data Automation",
+    id: "personal-portfolio",
+    title: "Personal Portfolio",
     image: "assets/project-3.jpg",
-    categories: ["Python", "Data Analytics"],
+    categories: ["HTML", "CSS", "JavaScript"],
     description:
-      "A Python workflow that cleans, transforms and exports recurring datasets, replacing a manual spreadsheet process.",
-    technologies: ["Python", "pandas", "Excel"],
-    features: ["Automated data cleaning", "Reusable transformation functions", "Scheduled report export", "Validation checks"],
-    github: "",
+      "A responsive personal portfolio that presents my profile, data analytics skills, academic background, achievements, and contact details in a clear vCard-style layout.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Responsive vCard-style layout",
+      "Skills and education presentation",
+      "Projects and achievements showcase",
+      "Direct professional contact links",
+    ],
+    github: "https://github.com/kusumaramisetty00-byte/personal-portfolio",
     demo: "",
     details: {
-      overview: "[Overview placeholder.]",
-      problem: "[Problem statement placeholder.]",
-      objective: "[Objective placeholder.]",
-      dataset: "[Dataset description placeholder.]",
-      methodology: ["[Step 1]", "[Step 2]"],
-      results: "[Results placeholder.]",
-      insights: ["[Key insight 1]"],
+      overview: "A public portfolio project built to organize my professional background and technical capabilities in one mobile-friendly website.",
+      problem: "Recruiters need a quick way to review my skills, education, achievements, and contact information.",
+      objective: "Present my professional profile in a concise, accessible, and responsive format.",
+      dataset: "This website uses professional profile content rather than a data-analysis dataset.",
+      methodology: [
+        "Organized profile information into focused sections",
+        "Built the visual layout with HTML and CSS",
+        "Added interactive behavior with JavaScript",
+      ],
+      results: "Published a responsive portfolio repository that can be reviewed and shared through GitHub.",
+      insights: ["Compact layouts help recruiters scan information quickly", "Mobile-friendly presentation improves accessibility"],
     },
   },
 ];
@@ -134,15 +157,33 @@ const experience = [
 
 const education = [
   {
-    degree: "[MCA]",
-    institution: "[ Vikram simhapuri University ]",
-    duration: "[2024] – [2026]",
-    details: ["[Computer science]", "\n"],
+    degree: "Master of Computer Applications (MCA)",
+    institution: "Vikram Simhapuri University",
+    duration: "2024–2026",
+    details: ["CGPA: 8.7"],
+  },
+  {
+    degree: "Bachelor of Science (Computers)",
+    institution: "",
+    duration: "2021–2024",
+    details: ["CGPA: 9.0"],
+  },
+  {
+    degree: "Intermediate",
+    institution: "",
+    duration: "2019–2021",
+    details: ["Score: 94.5%"],
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    institution: "",
+    duration: "2019",
+    details: ["Score: 92%"],
   },
 ];
 
 const certifications = [
-  // { name: "", issuer: "", date: "", credentialId: "", url: "" }
+  { name: "Data Analytics Certification", issuer: "Analytics Benchmark", date: "2024", credentialId: "", url: "" },
 ];
 
 const achievements = [
@@ -173,7 +214,7 @@ function escapeHtml(value) {
   );
 }
 
-/** Build a link or an inactive placeholder button. */
+/** Build a link or an inactive button. */
 function linkButton(url, label, variant = "btn--ghost") {
   if (!url) {
     return `<span class="btn ${variant} btn--sm is-disabled" aria-disabled="true">${escapeHtml(label)} — unavailable</span>`;
@@ -206,7 +247,6 @@ function applyConfig() {
       return;
     }
     el.href = key === "email" ? `mailto:${value}` : value;
-    if (key === "email" && el.textContent.trim().startsWith("[")) el.textContent = value;
     if (key !== "resume" && key !== "email") {
       el.target = "_blank";
       el.rel = "noopener";
@@ -256,7 +296,8 @@ function renderProjects() {
           ${tagList(p.technologies)}
           <ul class="project-features">${p.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
           <div class="project-actions">
-            ${linkButton(p.demo, "Live Demo")}
+            ${p.github ? linkButton(p.github, "GitHub") : ""}
+            ${p.demo ? linkButton(p.demo, "Live Demo") : ""}
             <button class="btn btn--primary btn--sm" data-project="${escapeHtml(p.id)}">View Details</button>
           </div>
         </div>
@@ -301,7 +342,7 @@ function renderEducation() {
       <article class="card timeline-item reveal">
         <p class="meta">${escapeHtml(e.duration)}</p>
         <h3>${escapeHtml(e.degree)}</h3>
-        <p>${escapeHtml(e.institution)}</p>
+        ${e.institution ? `<p>${escapeHtml(e.institution)}</p>` : ""}
         <ul>${(e.details || []).map((d) => `<li>${escapeHtml(d)}</li>`).join("")}</ul>
       </article>`
     )
@@ -476,7 +517,7 @@ function initModal() {
       <h4>Key Features</h4><ul>${project.features.map((f) => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
       <h4>Results</h4><p>${escapeHtml(d.results)}</p>
       <h4>Key Insights</h4><ul>${(d.insights || []).map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
-      <div class="project-actions">${linkButton(project.github, "GitHub")}${linkButton(project.demo, "Live Demo")}</div>
+      ${(project.github || project.demo) ? `<div class="project-actions">${project.github ? linkButton(project.github, "GitHub") : ""}${project.demo ? linkButton(project.demo, "Live Demo") : ""}</div>` : ""}
     `;
     lastFocused = document.activeElement;
     modal.hidden = false;
@@ -548,17 +589,14 @@ function initContactForm() {
       return;
     }
 
-    // No email service is connected yet, so nothing is actually sent.
-    // Connect a service (e.g. Formspree, EmailJS or your own API) here.
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending…";
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send Message";
-      status.classList.add("error");
-      const mail = portfolioLinks.email ? ` Email ${portfolioLinks.email} directly in the meantime.` : "";
-      status.textContent = `This form isn't connected to an email service yet, so your message wasn't sent.${mail}`;
-    }, 700);
+    const name = $("#cName").value.trim();
+    const sender = $("#cEmail").value.trim();
+    const subject = $("#cSubject").value.trim();
+    const message = $("#cMessage").value.trim();
+    const body = `${message}\n\nFrom: ${name}\nEmail: ${sender}`;
+    window.location.href = `mailto:${portfolioLinks.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    status.classList.add("success");
+    status.textContent = "Your email app is ready with this message.";
   });
 
   form.addEventListener("input", (e) => {
